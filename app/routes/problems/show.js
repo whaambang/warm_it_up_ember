@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return { property1: "hi" }
+    return { property1: "hi" };
   }
 });
