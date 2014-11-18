@@ -23,3 +23,10 @@ html, body {
   height: 110px;
   width: 110px;
 }
+
+/* PROBLEM PAGE */
+
+.problem-text {
+  border: 2px solid black;
+  padding: 15px;
+}
