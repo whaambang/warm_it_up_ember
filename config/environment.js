@@ -20,11 +20,11 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self'",
+      'script-src': "'self' ",
       'font-src': "'self'",
       'connect-src': "'self' 0.0.0.0:3000",
       'img-src': "'self'",
-      'style-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
     },
   };
