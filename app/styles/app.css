@@ -7,6 +7,16 @@ html, body {
   border: 2px solid black;
   height: 100px;
 }
+.posse-row-left {
+  display: inline-block;
+  width: 40%;
+  padding: 10px;
+}
+.posse-row-right {
+  display: inline-block;
+  width: 55%;
+  padding: 5px;
+}
 .posse-pic img {
   height: 80px;
   width: 80px;
@@ -14,18 +24,38 @@ html, body {
 .posse-name {
 
 }
-
 .update-row {
   border: 2px solid black;
   height: 175px;
+}
+.update-row-left {
+  display: inline-block;
+  width: 25%;
 }
 .update-pic img {
   height: 110px;
   width: 110px;
 }
+.update-row-right {
+  display: inline-block;
+  width: 70%;
+  padding: 20px;
+}
+.update-name {
+  font-size: 2em;
+  font-weight: bold;
+}
+.point-adjust {
+  color: red;
+  font-size: 1.6em;
+  padding: 10px;
+}
+.update-title {
+  padding: 10px;
+  font-size: 1.4em;
+}
 
 /* PROBLEM PAGE */
-
 .problem-text {
   border: 2px solid black;
   padding: 15px;
