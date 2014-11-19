@@ -1,5 +1,5 @@
 <form {{action "submit" on="submit"}}>
-   <p><label>Code {{textarea value=content}}</label></p>
+   <p><label>Code {{textarea value=model.content}}</label></p>
 
    <button {{action "run"}}>Run</button>
    <input type="submit" {{bindAttr value=submitTitle}}>

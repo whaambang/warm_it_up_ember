@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('scores');
   this.resource('problems', function() {
-  this.route('show', { path: ':problem_id' });
+    this.route('show', { path: ':problem_id' });
   });
 });
 

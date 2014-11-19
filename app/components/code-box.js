@@ -11,6 +11,7 @@ export default Ember.Component.extend({
     run: function() {
       this.sendAction('run', {
         //  get the code from the div
+        //  this.get('model.content');
         //  send request to Rails/Eval.in via AJAX
         //
         //  get response from ^^
