@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  solution: this.get('problem.solution'),
   actions: {
     submit: function() {
       this.sendAction('submit', {
@@ -8,22 +9,23 @@ export default Ember.Component.extend({
       });
     },
 
-    run: function() {
-      this.sendAction('run', {
+    run: function(solution) {
+      this.sendAction('run', function(solution){
+
         //  get the code from the div
-        //  this.get('model.content');
+            var answer;
         //  send request to Rails/Eval.in via AJAX
-        //
-        //  get response from ^^
-        //  compare result with problem.solution
-        //  decide success or failure
-        //
-        //  if success
-        //    notify success
-        //    activate submit button
-        //
-        //  else
-        //    notify failure
+            $.post('/coderunner', {code: 'puts "Hello Wold"'})
+              .done(function(data, solution){
+                answer = data;
+                if(answer === solution){
+                  //success notification
+                  //activate submit button
+                }
+                else{
+                  //failure notification
+                }
+              });
       });
     }
   }
