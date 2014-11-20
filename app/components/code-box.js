@@ -51,13 +51,13 @@ export default Ember.Component.extend({
         })
         .done(function(data, solution){
           answer = data;
-          var solution = 'hello';
+          var solution = '906609';
           if(answer === solution){
-            //success notification
+            alert('success!')
             //activate submit button
           }
           else{
-            //failure notification
+            alert("you're wrong!")
           }
         })
         .fail(function(){
