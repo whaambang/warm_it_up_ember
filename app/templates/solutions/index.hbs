@@ -1,5 +1,4 @@
 <h3>Solutions</h3>
-<p>{{#link-to 'solutions.create'}}Add Your Submission{{/link-to}}</p>
 <table>
   <thead>
     <th>Posse ID</th>
@@ -12,8 +11,6 @@
       <tr>
           <td>{{posse_id}}</td>
           <td>{{problem_id}}</td>
-          <td>{{~#link-to 'solutions.show' this}}
-          {{content}}{{~/link-to}}</td>
           <td>{{points_earned}}</td>
       </tr>
     {{/each}}
