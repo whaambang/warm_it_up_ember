@@ -53,8 +53,8 @@ export default Ember.Component.extend({
         })
         .done(function(data, solution){
           answer = data;
-          var solution = '906609';
-          if(answer === solution){
+          var solution = "906609";
+          if(answer == solution){
             alert('success!')
             //activate submit button
           }
