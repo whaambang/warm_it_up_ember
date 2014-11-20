@@ -60,3 +60,11 @@ html, body {
   border: 2px solid black;
   padding: 15px;
 }
+
+pre {
+  height: 120px;
+}
+
+#editor {
+  height: 160px;
+}
