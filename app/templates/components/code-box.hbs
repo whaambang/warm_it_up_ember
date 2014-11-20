@@ -1,6 +1,3 @@
-<form {{action "submit" on="submit"}}>
-  <p><label>Your Code {{textarea value=content}}</label></p>
-
-  <button {{action "run"}}>Cancel</button>
-  <input type="submit" {{bindAttr value=submitTitle}}>
-</form>
+<pre id='editor'></pre>
+<button {{action "run"}}>Run</button>
+<input type="submit" {{bindAttr value=submitTitle}}>
