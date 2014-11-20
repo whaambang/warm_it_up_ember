@@ -30,7 +30,9 @@ export default Ember.Component.extend({
       this.preset = null;
     }
   },
+
   solution: 'hello',
+  
   actions: {
     submit: function() {
       this.sendAction('submit', function(){
