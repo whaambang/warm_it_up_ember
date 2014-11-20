@@ -30,7 +30,7 @@ export default Ember.Component.extend({
       this.preset = null;
     }
   },
-  solution: 'helloworld',
+  solution: 'hello',
   actions: {
     submit: function() {
       this.sendAction('submit', function(){
@@ -42,12 +42,16 @@ export default Ember.Component.extend({
       //  get the code from the div
       var answer;
       var code = this.editor.getValue();
-      console.log(code);
       //  send request to Rails/Eval.in via AJAX
-      $.post('http://0.0.0.0:3000/api/v1/coderunner', {code: code})
+      $.ajax({
+        type: 'GET',
+        url: 'http://0.0.0.0:3000/api/v1/coderunner',
+        data:{code: code},
+        dataType: 'jsonp'
+        })
         .done(function(data, solution){
           answer = data;
-          debugger;
+          var solution = 'hello';
           if(answer === solution){
             //success notification
             //activate submit button

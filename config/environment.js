@@ -20,9 +20,9 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' ",
+      'script-src': "'self' http://127.0.0.1:3000",
       'font-src': "'self'",
-      'connect-src': "'self' 0.0.0.0:3000",
+      'connect-src': "'self' '127.0.0.1:3000'",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
