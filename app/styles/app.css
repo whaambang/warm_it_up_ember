@@ -61,10 +61,12 @@ html, body {
   padding: 15px;
 }
 
-pre {
-  height: 120px;
-}
+/*pre {*/
+  /*height: 120px;*/
+  /*background-color: black;*/
+/*}*/
 
 #editor {
   height: 160px;
 }
+

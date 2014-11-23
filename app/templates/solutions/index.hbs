@@ -1,21 +1,8 @@
 <h3>Solutions</h3>
-<p>{{#link-to 'solutions.create'}}Add Your Submission{{/link-to}}</p>
-<table>
-  <thead>
-    <th>Posse ID</th>
-    <th>Problem ID</th>
-    <th>Content</th>
-    <th>Points Earned</th>
-  </thead>
-  <tbody>
-    {{#each}}
-      <tr>
-          <td>{{posse_id}}</td>
-          <td>{{problem_id}}</td>
-          <td>{{~#link-to 'solutions.show' this}}
-          {{content}}{{~/link-to}}</td>
-          <td>{{points_earned}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+
+{{#each}}
+  <pre><code class="language-ruby">
+    {{content}}
+  </code></pre>
+  <p>Points earned: {{points_earned}}</p><hr>
+{{/each}}
