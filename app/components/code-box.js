@@ -34,10 +34,8 @@ export default Ember.Component.extend({
   solution: '906609',
 
   actions: {
-    submit: function() {
-      this.sendAction('submit', function(){
-        //  create solution record & save to Rails
-      });
+    createSolution: function() {
+      this.sendAction('submit', this.editor.getValue());
     },
 
     run: function(solution) {
