@@ -6,7 +6,7 @@ export default Ember.Component.extend({
       this.preset = val;
       return val;
     }
-    if (arguments.length == 1) {
+    if (arguments.length === 1) {
       return this.editor.getSession().getValue();
     }
     var cursor = this.editor.getCursorPosition();
