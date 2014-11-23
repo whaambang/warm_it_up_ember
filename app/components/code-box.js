@@ -32,7 +32,7 @@ export default Ember.Component.extend({
   },
 
   solution: 'hello',
-  
+
   actions: {
     submit: function() {
       this.sendAction('submit', function(){
