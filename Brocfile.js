@@ -5,8 +5,25 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp();
  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+ app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
+    destDir: 'assets'
+  });
  app.import('bower_components/prism/prism.js');
  app.import('bower_components/prism/themes/prism-okaidia.css');
+
+var compileSass = require('broccoli-sass');
+var mergeTrees = require('broccoli-merge-trees');
+
+var sassSources = [
+  'app/styles',
+  'vendor/bootstrap-sass-official/vendor/assets/stylesheets'
+]
+
+var appCss = compileSass( sassSources , 'app.custom_scss', 'assets/app.css');
+
+var appAndCustomDependencies = mergeTrees([app.toTree(),appCss], {
+  overwrite: true
+});
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
@@ -19,5 +36,5 @@ var app = new EmberApp();
 // modules that you would like to import into your application
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
-
-module.exports = app.toTree();
+module.exports = appAndCustomDependencies;
+// module.exports = app.toTree();

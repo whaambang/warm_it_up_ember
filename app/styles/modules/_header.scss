@@ -1,0 +1,65 @@
+.mod-header {
+  @extend %clearfix;
+  min-height: 143px;
+  padding-top: 30px;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  color: white;
+  background: $gray;
+  border-bottom: solid 4px $blue;
+  .index & {
+    width: 100%;
+    position: absolute;
+    background: transparent;
+    border: 0;
+  }
+  h1 {
+    width: 255px;
+    height: 77px;
+    float: left;
+    // @include hide-text;
+    @include data-uri-bg("logo.png", no-repeat);
+    @include retina {
+      background-image: inline-image("logo@2x.png");
+      background-size: 100%;
+    }
+
+    a {
+      height: 77px;
+      display: block;
+    }
+  }
+  nav {
+    margin-top: 35px;
+    float: right;
+  }
+  li {
+    float: left;
+    margin-left: 15px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    // @include transition(color 0.3s);
+    @include hocus {
+      color: $blue;
+    }
+  }
+  .active a {
+    color: $blue;
+  }
+  @include max-width(845px) {
+    font-size: $font-size;
+    h1,
+    nav {
+      float: none;
+    }
+    li {
+      margin: 0 20px 20px 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
