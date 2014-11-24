@@ -15,11 +15,10 @@ var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
 
 var sassSources = [
-  'app/styles',
-  'vendor/bootstrap-sass-official/vendor/assets/stylesheets'
+  'app/styles'
 ]
 
-var appCss = compileSass( sassSources , 'app.custom_scss', 'assets/app.css');
+var appCss = compileSass( sassSources , 'app.scss', 'assets/app.css');
 
 var appAndCustomDependencies = mergeTrees([app.toTree(),appCss], {
   overwrite: true

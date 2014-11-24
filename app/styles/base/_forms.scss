@@ -32,7 +32,7 @@ label {
   font-size: $font-size;
   text-align: left;
   color: #999999;
-  // @include transition(0.3s);
+  @include transition(0.3s);
 }
 
 input,
@@ -52,8 +52,8 @@ textarea {
   background: #f2f2f2;
   border: solid 1px #cccccc;
   -webkit-appearance: none;
-  // @include border-radius(0);
-  // @include transition(border 0.3s);
+  @include border-radius(0);
+  @include transition(border 0.3s);
   @include max-width(400px) {
     font-size: 16px;
   }

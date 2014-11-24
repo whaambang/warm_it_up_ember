@@ -1,5 +1,8 @@
 .mod-header {
   @extend %clearfix;
+  @media (max-width: 845px){
+    height: 180px;
+  };
   min-height: 143px;
   padding-top: 30px;
   font-size: 12px;
@@ -8,6 +11,10 @@
   color: white;
   background: $gray;
   border-bottom: solid 4px $blue;
+  ul{
+    margin: 0px;
+    padding: 0px;
+  }
   .index & {
     width: 100%;
     position: absolute;
@@ -16,12 +23,13 @@
   }
   h1 {
     width: 255px;
+    margin: 0px;
     height: 77px;
     float: left;
-    // @include hide-text;
-    @include data-uri-bg("logo.png", no-repeat);
+    @include hide-text;
+    background-image: url("https://raw.githubusercontent.com/turingschool/today/master/source/images/logo.png", no-repeat);
     @include retina {
-      background-image: inline-image("logo@2x.png");
+      background-image: url("https://raw.githubusercontent.com/turingschool/today/master/source/images/logo@2x.png");
       background-size: 100%;
     }
 
@@ -34,6 +42,9 @@
     margin-top: 35px;
     float: right;
   }
+  ul{
+    list-style-type: none;
+  }
   li {
     float: left;
     margin-left: 15px;
@@ -41,7 +52,7 @@
   a {
     text-decoration: none;
     color: white;
-    // @include transition(color 0.3s);
+    @include transition(color 0.3s);
     @include hocus {
       color: $blue;
     }

@@ -3,15 +3,6 @@
 @import "app/styles/utilities/mixins";
 @import "app/styles/utilities/variables";
 
-@import "app/styles/modules/ankeiler";
-@import "app/styles/modules/columns";
-@import "app/styles/modules/footer";
-@import "app/styles/modules/header";
-@import "app/styles/modules/outline";
-@import "app/styles/modules/outline_list";
-@import "app/styles/modules/quote";
-@import "app/styles/modules/text";
-
 @import "app/styles/base/forms";
 @import "app/styles/base/layout";
 @import "app/styles/base/typography";
@@ -20,9 +11,14 @@
 @import "app/styles/components/inline_code";
 @import "app/styles/components/logos";
 
-html, body {
-  margin: 20px;
-}
+@import "app/styles/modules/ankeiler";
+@import "app/styles/modules/columns";
+@import "app/styles/modules/footer";
+@import "app/styles/modules/header";
+@import "app/styles/modules/outline";
+@import "app/styles/modules/outline_list";
+@import "app/styles/modules/quote";
+@import "app/styles/modules/text";
 
 /* STATS PAGE */
 .posse-row {
