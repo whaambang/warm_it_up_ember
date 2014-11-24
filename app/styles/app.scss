@@ -1,4 +1,5 @@
 // This is hopefully a temporary solution, importing entire directories was not working
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,100,200,300);
 @import "app/styles/utilities/variables";
 @import "app/styles/utilities/mixins";
 @import "app/styles/utilities/variables";
@@ -15,62 +16,15 @@
 @import "app/styles/modules/columns";
 @import "app/styles/modules/footer";
 @import "app/styles/modules/header";
-@import "app/styles/modules/outline";
+@import "app/styles/modules/scores";
 @import "app/styles/modules/outline_list";
 @import "app/styles/modules/quote";
 @import "app/styles/modules/text";
 
-/* STATS PAGE */
-.posse-row {
-  border: 2px solid black;
-  height: 100px;
-}
 .posse-row-left {
   display: inline-block;
   width: 40%;
   padding: 10px;
-}
-.posse-row-right {
-  display: inline-block;
-  width: 55%;
-  padding: 5px;
-}
-.posse-pic img {
-  height: 80px;
-  width: 80px;
-}
-.posse-name {
-
-}
-.update-row {
-  border: 2px solid black;
-  height: 175px;
-}
-.update-row-left {
-  display: inline-block;
-  width: 25%;
-}
-.update-pic img {
-  height: 110px;
-  width: 110px;
-}
-.update-row-right {
-  display: inline-block;
-  width: 70%;
-  padding: 20px;
-}
-.update-name {
-  font-size: 2em;
-  font-weight: bold;
-}
-.point-adjust {
-  color: red;
-  font-size: 1.6em;
-  padding: 10px;
-}
-.update-title {
-  padding: 10px;
-  font-size: 1.4em;
 }
 
 /* PROBLEM PAGE */
