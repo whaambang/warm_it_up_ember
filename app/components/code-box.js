@@ -6,7 +6,7 @@ export default Ember.Component.extend({
       this.preset = val;
       return val;
     }
-    if (arguments.length == 1) {
+    if (arguments.length === 1) {
       return this.editor.getSession().getValue();
     }
     var cursor = this.editor.getCursorPosition();
@@ -53,13 +53,13 @@ export default Ember.Component.extend({
         })
         .done(function(data, solution){
           answer = data;
-          var solution = "906609";
-          if(answer == solution){
-            alert('success!')
+          solution = "906609";
+          if(answer === solution){
+            alert('success!');
             //activate submit button
           }
           else{
-            alert("you're wrong!")
+            alert("you're wrong!");
           }
         })
         .fail(function(){
