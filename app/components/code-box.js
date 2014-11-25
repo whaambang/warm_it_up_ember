@@ -17,7 +17,7 @@ export default Ember.Component.extend({
 
   didInsertElement: function() {
     this.editor = window.ace.edit('editor');
-    this.editor.setTheme('ace/theme/github');
+    this.editor.setTheme('ace/theme/monokai');
     this.editor.getSession().setMode('ace/mode/ruby');
 
     var self = this;
