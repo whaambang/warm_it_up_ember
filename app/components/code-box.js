@@ -31,13 +31,11 @@ export default Ember.Component.extend({
     }
   },
 
-  solution: 'hello',
+  solution: '906609',
 
   actions: {
-    submit: function() {
-      this.sendAction('submit', function(){
-        //  create solution record & save to Rails
-      });
+    createSolution: function() {
+      this.sendAction('submit', this.editor.getValue());
     },
 
     run: function(solution) {
@@ -53,7 +51,7 @@ export default Ember.Component.extend({
         })
         .done(function(data, solution){
           answer = data;
-          solution = "906609";
+          var solution = "906609";
           if(answer === solution){
             alert('success!');
             //activate submit button

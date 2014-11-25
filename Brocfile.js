@@ -8,8 +8,6 @@ var app = new EmberApp();
  app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {
     destDir: 'assets'
   });
- app.import('bower_components/prism/prism.js');
- app.import('bower_components/prism/themes/prism-okaidia.css');
 
 var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
