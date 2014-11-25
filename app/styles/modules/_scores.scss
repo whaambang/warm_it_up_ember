@@ -6,7 +6,7 @@
       margin: 0.5em 0em;
     }
   }
-  padding: 1em 2em 1em 2em;
+  padding: 0em 2em 1em 2em;
   .layout-inner-wrap {
     min-width: 90%;
   }
@@ -137,4 +137,13 @@
 .point-adjust{
   font-size: 48px;
   color: #05c2d1;
+}
+
+.countdown{
+  width: 25%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.countdown-wrapper{
 }

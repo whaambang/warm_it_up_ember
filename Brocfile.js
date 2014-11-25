@@ -10,6 +10,10 @@ var app = new EmberApp();
   });
  app.import('bower_components/prism/prism.js');
  app.import('bower_components/prism/themes/prism-okaidia.css');
+ app.import('bower_components/FlipClock/compiled/flipclock.min.js');
+ app.import('bower_components/FlipClock/compiled/flipclock.css');
+ app.import('bower_components/FlipClock/compiled/flipclock.js');
+
 
 var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
