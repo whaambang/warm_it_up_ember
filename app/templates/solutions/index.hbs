@@ -1,8 +1,9 @@
-<h3>Solutions</h3>
-
-{{#each}}
-  <pre><code class="language-ruby">
-    {{content}}
-  </code></pre>
-  <p>Points earned: {{points_earned}}</p><hr>
-{{/each}}
+<div class="mod-scores">
+  <div class="col-md-12">
+    <h2>Solutions</h2>
+      {{#each solution in model}}
+        {{solution-box solution=solution}}
+      {{/each}}
+    </div>
+  </div>
+</div>
