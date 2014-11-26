@@ -1,0 +1,44 @@
+.solution-box{
+  display: inline-block;
+  width: 40%;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.solutions{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.solution-name{
+  font-size: 46px;
+}
+
+.solution-box-right{
+  position: absolute;
+  display: inline-block;
+  width: 55%;
+  height: 100%;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.solution-buttons {
+  float:right;
+  color: black;
+}
+
+.solution-point{
+  font-size: 26px;
+  color: white;
+  padding: 100px
+}
+
+.solution {
+  margin: 10px
+}
+
+.clicked {
+  color: #05c2d1;
+}
