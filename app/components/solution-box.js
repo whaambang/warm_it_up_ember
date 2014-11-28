@@ -4,32 +4,34 @@ export default Ember.Component.extend({
   isEnabled: false,
   liked: false,
   disliked: false,
+  sortAscending: true,
+  sortProperties: ['points_earned'],
 
   actions: {
     show: function(){
       this.toggleProperty('isEnabled');
       if(this.isEnabled){
-        $('.show').addClass('clicked')
-        $('pre').removeClass( 'hidden' );
+        this.$('.show').addClass('clicked');
+        this.$('pre').removeClass( 'hidden' );
       }else{
-        $('.show').removeClass('clicked')
-        $('pre').addClass( 'hidden' );
+        this.$('.show').removeClass('clicked');
+        this.$('pre').addClass( 'hidden' );
       }
     },
     dislike: function(){
       this.toggleProperty('isEnabled');
       if(this.isEnabled){
-        $('.dislike').addClass('clicked')
+        this.$('.dislike').addClass('clicked');
       }else{
-        $('.dislike').removeClass('clicked')
+        this.$('.dislike').removeClass('clicked');
       }
              },
     like: function(){
       this.toggleProperty('isEnabled');
       if(this.isEnabled){
-        $('.like').addClass('clicked')
+        this.$('.like').addClass('clicked');
       }else{
-        $('.like').removeClass('clicked')
+        this.$('.like').removeClass('clicked');
       }
           }
   }
