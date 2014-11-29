@@ -6,5 +6,7 @@ export default Ember.ArrayController.extend({
   highestScore: function(){
     var ob = this.get('firstObject');
     return ob.get('scores');
-  }.property('highestScore')
+  }.property('highestScore'),
+  score: 200
+
 });
