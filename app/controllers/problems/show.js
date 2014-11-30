@@ -8,9 +8,9 @@ export default Ember.ObjectController.extend({
         var timeAtStart      = new Date().setHours(8,30,0,0);
         var secondsFromStart = (timeAtSubmission - timeAtStart)/1000;
         if (parseInt(2000 - secondsFromStart, 10) > 0) {
-          return parseInt(2000 - secondsFromStart, 10);
+          return parseInt(2200 - secondsFromStart, 10);
         } else {
-          return 0;
+          return 200;
         }
       };
       var solution = this.store.createRecord('solution', {
