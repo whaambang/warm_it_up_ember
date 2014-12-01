@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
   problemNumber: function() {
     var initialDate = new Date(2014, 10, 1); // Attention: month is zero-based
     var now = Date.now();
