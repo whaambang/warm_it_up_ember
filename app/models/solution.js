@@ -6,5 +6,5 @@ export default DS.Model.extend({
   content: DS.attr('string'),
   points_earned: DS.attr('string'),
   posse: DS.attr('string'),
-  updated_at: DS.attr('string')
+  problem: DS.belongsTo('problem')
 });
