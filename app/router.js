@@ -6,7 +6,9 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('scores');
+  this.resource('posses', { path: '/'}, function(){
+    this.route('show', { path: ':poss_id'});
+  });
   this.resource('problems', function() {
     this.route('show', { path: ':problem_id' });
   });
