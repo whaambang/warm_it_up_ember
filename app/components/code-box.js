@@ -31,16 +31,14 @@ export default Ember.Component.extend({
     }
   },
 
-  solution: '906609',
-
   actions: {
     createSolution: function() {
       this.sendAction('submit', this.editor.getValue());
     },
 
-    run: function(solution) {
+    run: function() {
+      var answer = this.get('answer')
       //  get the code from the div
-      var answer;
       var code = this.editor.getValue();
       //  send request to Rails/Eval.in via AJAX
       $.ajax({
@@ -49,10 +47,10 @@ export default Ember.Component.extend({
         data:{code: code},
         dataType: 'jsonp'
         })
-        .done(function(data, solution){
-          answer = data;
-          var solution = "906609";
-          if(answer === solution){
+        .done(function(data){
+          debugger;
+          var solution = data;
+          if(solution === answer){
             alert('success!');
             //activate submit button
           }

@@ -1,18 +1,13 @@
-
-
-
 <div class="mod-problems">
   <div class="col-md-6 col-problem">
     <h1>Problem</h1>
     <div class="box">
-      <p>Dynamically coded: {{model.content}}</p>
-      <p>Hard-coded: A palindromic number reads the same both ways.
-      The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
-      Find the largest palindrome made from the product of two 3-digit numbers.</p>
+      <p id="problem">{{model.content}}</p>
     </div>
   </div>
   <div class="col-md-6 col-solution">
     <h1>Solution</h1>
-    {{code-box submit="createSolution"}}
+    {{code-box answer = model.answer submit="createSolution"}}
   </div>
+  {{controllers.application.currentUser.id}}
 </div>

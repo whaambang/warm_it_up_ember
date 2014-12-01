@@ -18,7 +18,9 @@ Router.map(function() {
     this.route('create', { path: 'create'});
   });
 
+  this.resource('users', function() {
+    this.route('user', { path: ':user_id' });
+  });
 });
-
 
 export default Router;

@@ -6,7 +6,7 @@
     <nav>
       <ul>
         <li>
-          {{link-to "Today's Problem" 'problems.show' 1}}
+          {{link-to "Today's Problem" 'problems.show' problemNumber}}
         </li>
         <li>
           {{link-to 'Problems' 'problems'}}
@@ -17,6 +17,7 @@
         <li>
           {{link-to 'Scores' 'posses.index'}}
         </li>
+
         <li>
           <a href='/' onClick="window.open('http://localhost:3000/auth/github', '_blank')">Sign In with Github</a>
           </li>
