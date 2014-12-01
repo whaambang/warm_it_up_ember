@@ -6,11 +6,10 @@
         <span class="solution-name">{{solution.posse}}</span><br/>
       </div>
       <div class="solution-box-right">
-        <span class="solution-point"> {{solution.points_earned}} points </span>
+        <span> {{solution.points_earned}} points </span>
+        <button class="solution-buttons dislike" {{action 'addDislike' solution}}>Dislike</button>
+        <button class="solution-buttons like" {{action 'addLike' solution}}>Like</button>
         <button class="solution-buttons show" {{action 'show'}}>Show</button>
-        <button class="solution-buttons dislike" {{action 'dislike'}}>Dislike</button>
-        <button class="solution-buttons like" {{action 'like'}}>Like</button>
-
       </div>
       <pre class="hidden solution">
         <code class="language-ruby">

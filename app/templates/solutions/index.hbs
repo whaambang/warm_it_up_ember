@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <h2>Solutions</h2>
       {{#each solution in model}}
-        {{solution-box solution=solution}}
+        {{solution-box solution=solution like="addLike" dislike="addDislike"}}
       {{/each}}
     </div>
   </div>
