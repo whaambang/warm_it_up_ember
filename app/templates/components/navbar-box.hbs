@@ -6,14 +6,18 @@
     <nav>
       <ul>
         <li>
+          {{link-to "Today's Problem" 'problems.show' problemNumber}}
+        </li>
+        <li>
           {{link-to 'Problems' 'problems'}}
         </li>
         <li>
           {{link-to 'Solutions' 'solutions'}}
         </li>
-        <li class="active">
+        <li>
           {{link-to 'Scores' 'scores'}}
         </li>
+
         <li>
           <a href='/' onClick="window.open('http://localhost:3000/auth/github', '_blank')">Sign In with Github</a>
         </li>
