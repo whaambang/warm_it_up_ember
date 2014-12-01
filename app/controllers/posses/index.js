@@ -7,5 +7,5 @@ export default Ember.ObjectController.extend({
   //   var ob = this.get('firstObject');
   //   return ob.get('scores');
   // }.property('highestScore'),
-  score: 200
+  score: 1000
 });
