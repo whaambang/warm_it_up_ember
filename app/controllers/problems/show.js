@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-  
+  needs: ['application'],
   actions: {
     createSolution: function(answer) {
       var points = function () {
