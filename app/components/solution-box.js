@@ -9,28 +9,16 @@ export default Ember.Component.extend({
     show: function(){
       this.toggleProperty('isEnabled');
       if(this.isEnabled){
-        $('.show').addClass('clicked')
+        $('.show').addClass('clicked');
         $('pre').removeClass( 'hidden' );
       }else{
         $('.show').removeClass('clicked')
         $('pre').addClass( 'hidden' );
       }
     },
-    dislike: function(){
-      this.toggleProperty('isEnabled');
-      if(this.isEnabled){
-        $('.dislike').addClass('clicked')
-      }else{
-        $('.dislike').removeClass('clicked')
-      }
-             },
-    like: function(){
-      this.toggleProperty('isEnabled');
-      if(this.isEnabled){
-        $('.like').addClass('clicked')
-      }else{
-        $('.like').removeClass('clicked')
-      }
-          }
+    addLike: function(solution){
+      // this.toggleProperty('isEnabled');
+      this.sendAction('like', solution);
+    }
   }
 });
