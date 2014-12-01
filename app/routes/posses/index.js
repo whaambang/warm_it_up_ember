@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.find('poss');
+    return Ember.RSVP.hash({ poss: this.store.find('poss'),
+            solution: this.store.find('solution')
+          });
   }
 });
