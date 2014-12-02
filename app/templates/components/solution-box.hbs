@@ -4,11 +4,17 @@
       <span class="solution-name">{{solution.posse}}</span><br/>
     </div>
     <div class="solution-box-right">
+      <span class="point_adjust">{{solution.upvoteCount}}</span>
+      <span class="update-title"> upvotes</span>
       <span class="point-adjust">{{solution.points_earned}}</span>
       <span class="update-title"> points</span>
       <button class="solution-buttons show" {{action 'show'}}>Show</button>
-      <button class="solution-buttons dislike" {{action 'dislike'}}>Dislike</button>
-      <button class="solution-buttons like" {{action 'addLike' solution}}>Like</button>
+
+      {{#if wasLiked}}
+        <button class="solution-buttons like" {{action 'removeLike' solution}}>DisLike</button>
+      {{else}}
+        <button class="solution-buttons like" {{action 'addLike' solution}}>Like</button>
+      {{/if}}
     </div>
     <pre class="hidden solution">
       <code class="language-ruby">

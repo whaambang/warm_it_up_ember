@@ -4,7 +4,7 @@
       <div class="col-sm-1"></div>
       <div class="col-sm-10 solutions">
         {{#each solution in model}}
-          {{solution-box solution=solution like="addLike"}}
+          {{solution-box solution=solution unlike="removeLike" like="addLike" currentUser=controllers.application.currentUser}}
         {{/each}}
       </div>
     </div>

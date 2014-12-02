@@ -7,5 +7,9 @@ export default DS.Model.extend({
   points_earned: DS.attr('string'),
   votes: DS.hasMany('vote'),
   posse: DS.attr('string'),
-  problem: DS.belongsTo('problem')
+  problem: DS.belongsTo('problem'),
+
+  upvoteCount: function() {
+    return this.get('votes.length')
+  }.property('votes.length')
 });
