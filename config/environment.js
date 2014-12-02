@@ -19,7 +19,7 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'default-src': "'none'",
+      'default-src': "'none' http://fonts.googleapis.com 'self' 'unsafe-inline'",
       'script-src': "'self' 0.0.0.0:3000 'unsafe-eval' https://rawgit.com",
       'font-src': "'self' http://fonts.gstatic.com ",
       'connect-src': "'self' '127.0.0.1:3000'",
