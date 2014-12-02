@@ -18,7 +18,7 @@ export default Ember.ObjectController.extend({
       var solution = this.store.createRecord('solution', {
         content: answer,
         posse_id: this.get('controllers.application.currentUser.posse_id'),
-        problem_id: this.get('model.id'), 
+        problem: this.get('model'), 
         points_earned: points()
       });
       solution.save();
