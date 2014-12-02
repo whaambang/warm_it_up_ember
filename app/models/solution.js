@@ -5,6 +5,7 @@ export default DS.Model.extend({
   problem_id: DS.attr('string'),
   content: DS.attr('string'),
   points_earned: DS.attr('string'),
+  votes: DS.hasMany('vote'),
   posse: DS.attr('string'),
-  votes: DS.hasMany('vote')
+  problem: DS.belongsTo('problem')
 });

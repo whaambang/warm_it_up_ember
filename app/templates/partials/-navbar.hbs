@@ -14,10 +14,18 @@
         <li class="active">
           {{link-to 'Scores' 'scores'}}
         </li>
-        <li>
-          <a href='/' onClick="window.open('http://localhost:3000/auth/github', '_blank')">Sign In with Github</a>
-        </li>
-
+        {{#unless currentUser}}
+          <li>
+            <a href='/problems' onClick="window.open('http://localhost:3000/auth/github', '_blank')">Sign In with Github</a>
+          </li>
+        {{else}}
+          <li>
+          Welcome {{currentUser.name}}
+          </li>
+          <li>
+            <a href='http://localhost:3000/signout'>Sign Out</a>
+          </li>
+        {{/unless}}
       </ul>
     </nav>
   </div>

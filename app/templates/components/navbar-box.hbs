@@ -1,0 +1,35 @@
+<header class="mod-header">
+  <div class="layout-wrap">
+    <h1>
+      <a href="http://turing.io">Turing School of Software & Design</a>
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          {{link-to "Today's Problem" 'problems.show' problemNumber}}
+        </li>
+        <li>
+          {{link-to 'Problems' 'problems'}}
+        </li>
+        <li>
+          {{link-to 'Solutions' 'solutions'}}
+        </li>
+        <li>
+          {{link-to 'Scores' 'posses.index'}}
+        </li>
+        {{#unless currentUser}}
+          <li>
+            <a href='/problems' onClick="window.open('http://localhost:3000/auth/github', '_blank')">Sign In with Github</a>
+          </li>
+        {{else}}
+          <li>
+          Welcome {{currentUser.name}}
+          </li>
+          <li>
+            <a href='http://localhost:3000/signout'>Sign Out</a>
+          </li>
+        {{/unless}}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -2,5 +2,9 @@
   <h1>Problems</h1>
   {{#each}}
     <p>{{content}}</p>
+
+    {{#each solution in solutions}}
+      {{solution-box solution=solution}}
+    {{/each}}
   {{/each}}
 </div>
