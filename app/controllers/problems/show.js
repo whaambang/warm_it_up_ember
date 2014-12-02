@@ -14,7 +14,6 @@ export default Ember.ObjectController.extend({
           return 0;
         }
       };
-      debugger;
       var solution = this.store.createRecord('solution', {
         content: answer,
         posse_id: this.get('controllers.application.currentUser.posse_id'),
