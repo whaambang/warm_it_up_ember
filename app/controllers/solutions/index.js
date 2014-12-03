@@ -21,7 +21,7 @@ export default Ember.ArrayController.extend({
     });
     var sortedByPoints = filtered.sort(function(a,b){return a.points_earned-b.points_earned});
     return sortedByPoints;
-  }.property('currentSolutions'),
+  }.property('model.@each'),
 
   actions: {
     addLike: function(solution) {
