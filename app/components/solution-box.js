@@ -15,8 +15,8 @@ export default Ember.Component.extend({
     });
     return user_ids.some(function(user_id) {
       return user_id === currentUser.id;
-    })
-  }.property(),
+    });
+  }.property('currentUser'),
 
   actions: {
     show: function(){
@@ -32,9 +32,11 @@ export default Ember.Component.extend({
     addLike: function(solution){
       // this.toggleProperty('isEnabled');
       this.sendAction('like', solution);
+      this.set('wasLiked', true);
     },
     removeLike: function(solution) {
       this.sendAction('unlike', solution);
+      this.set('wasLiked', false);
     },
   }
 });
