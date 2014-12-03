@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
+  needs: ['application'],
+
   todaysProblem: function(){
    var initialDate = new Date(2014, 10, 1);
    var now = Date.now();
@@ -18,4 +20,13 @@ export default Ember.ArrayController.extend({
       if(s === todaysProblem){ return true; }
     });    
   }.property('currentSolutions')
+
+  actions: {
+    addLike: function(solution) {
+      $.get("api/v1/solutions/" + solution.id + "/like");
+    },
+    removeLike: function(solution) {
+      $.get("api/v1/solutions/" + solution.id + "/remove_like");
+    }
+  }
 });
