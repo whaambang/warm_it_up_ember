@@ -19,12 +19,12 @@ module.exports = function(environment) {
     },
 
     contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self' 0.0.0.0:3000 'unsafe-eval'",
-      'font-src': "'self'",
+      'default-src': "'none' http://fonts.googleapis.com 'self' 'unsafe-inline'",
+      'script-src': "'self' 0.0.0.0:3000 'unsafe-eval' https://rawgit.com",
+      'font-src': "'self' http://fonts.gstatic.com ",
       'connect-src': "'self' '127.0.0.1:3000'",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline'",
+      'img-src': "'self' https://raw.githubusercontent.com http://amturing.acm.org http://media-cache-ec0.pinimg.com http://upload.wikimedia.org http://sysrun.haifa.il.ibm.com http://a2.files.biography.com http://media.npr.org http://www.erlang-factory.com http://img.quotery.com https://encrypted-tbn0.gstatic.com https://encrypted-tbn1.gstatic.com http://www.siliconrepublic.com https://encrypted-tbn2.gstatic.com http://esslli2004.loria.fr http://wiki.linuxformat.ru data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
       'media-src': "'self'"
     },
   };
