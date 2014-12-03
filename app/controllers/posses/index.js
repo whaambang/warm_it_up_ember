@@ -13,14 +13,24 @@ export default Ember.ObjectController.extend({
     var sorted = posses.sortBy('scores').reverse();
     return sorted;
   }.property('sortedPosse'),
-  score: 1000,
-  currentSolutions: function(){
+
+  todaysProblem: function() {
+   var initialDate = new Date(2014, 10, 1);
+   var now = Date.now();
+   var difference = now - initialDate;
+   var millisecondsPerDay = 24 * 60 * 60 * 1000;
+   var daysSince = Math.floor(difference / millisecondsPerDay);
+   return daysSince;
+  }.property('todaysProblem'),
+
+  currentSolutions: function() {
+    var todaysProblem = this.get('todaysProblem');
     var solutions = this.get('solution');
-    return solutions.filter(function(solution){
-      var s = solution.get('created_at');
-      var solutionDate = new Date(s).getDate();
-      var currentDate = new Date().getDate();
-      if(solutionDate === currentDate){ return true }
+    var filtered = solutions.filter(function(solution) {
+      var s = parseInt(solution._data.problem.id);
+      if(s === todaysProblem){ return true; }
     });
-  }.property('currentSolution')
+    var sorted = filtered.sortBy('created_at').reverse();
+    return sorted;
+  }.property('currentSolutions'),
 });

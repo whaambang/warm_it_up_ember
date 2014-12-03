@@ -15,10 +15,12 @@ export default Ember.ArrayController.extend({
   currentSolutions: function() {
     var todaysProblem = this.get('todaysProblem');
     var solutions = this.get('model');
-    return solutions.filter(function(solution) {
+    var filtered =  solutions.filter(function(solution) {
       var s = parseInt(solution._data.problem.id);
       if(s === todaysProblem){ return true; }
     });
+    var sortedByPoints = filtered.sort(function(a,b){return a.points_earned-b.points_earned});
+    return sortedByPoints;
   }.property('currentSolutions'),
 
   actions: {
