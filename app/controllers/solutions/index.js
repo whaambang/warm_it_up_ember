@@ -22,13 +22,12 @@ export default Ember.ArrayController.extend({
     var sortedByPoints = filtered.sort(function(a,b){return a.points_earned-b.points_earned});
     return sortedByPoints;
   }.property('model.@each'),
-
   actions: {
-    addLike: function(solution) {
-      $.get("api/v1/solutions/" + solution.id + "/like");
-    },
-    removeLike: function(solution) {
-      $.get("api/v1/solutions/" + solution.id + "/remove_like");
-    }
-  }
+      addLike: function(solution){
+          var vote = this.store.createRecord('vote', {
+            solution: solution
+          });
+         vote.save(); 
+     }
+   }
 });
