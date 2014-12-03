@@ -20,8 +20,12 @@ export default Ember.ObjectController.extend({
         problem: this.get('model'),
         points_earned: points()
       });
-      solution.save();
-      this.transitionTo('solutions');
+      if (solution.get('posse_id')) {
+        solution.save();
+        this.transitionTo('solutions');
+      } else {
+        alert('Go log in, chum');
+      }
     }
   }
 });
