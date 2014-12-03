@@ -23,11 +23,25 @@ export default Ember.ArrayController.extend({
     return sortedByPoints;
   }.property('model.@each'),
   actions: {
-      addLike: function(solution){
-          var vote = this.store.createRecord('vote', {
-            solution: solution
-          });
-         vote.save(); 
-     }
-   }
+    addLike: function(solution) {
+      var currentUser = this.get('controllers.application.currentUser')
+      var votes = solution.get('votes')
+
+      var user_ids = votes.content.map(function(vote) {
+        return vote._data.user_id;
+      });
+      var alreadyLiked = user_ids.some(function(user_id) {
+        return user_id === currentUser.id;
+      })
+
+      if (alreadyLiked) {
+           alert('you cant')
+      } else {
+        var vote = this.store.createRecord('vote', {
+          solution: solution
+        });
+        vote.save()
+      }
+    }
+  }
 });
