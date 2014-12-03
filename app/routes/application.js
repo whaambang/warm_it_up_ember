@@ -6,6 +6,5 @@ export default Ember.Route.extend({
     $.getJSON("api/v1/users/current", function(data) {
       controller.set('currentUser', data.user);
     });
-  this.transitionTo('solutions');
   }
 });

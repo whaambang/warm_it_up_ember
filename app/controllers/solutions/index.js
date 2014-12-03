@@ -41,6 +41,7 @@ export default Ember.ArrayController.extend({
           solution: solution
         });
         vote.save()
+        // this.get('model.votes').pushObject(vote);
       }
     }
   }
