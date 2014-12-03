@@ -2,11 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   isEnabled: false,
-  liked: false,
-  disliked: false,
   sortAscending: true,
   sortProperties: ['points_earned'],
   needs: ['application'],
+
   wasLiked: function () {
     var currentUser = this.get('currentUser');
     var solution = this.get('solution');
@@ -37,21 +36,5 @@ export default Ember.Component.extend({
     removeLike: function(solution) {
       this.sendAction('unlike', solution);
     },
-    dislike: function(){
-      this.toggleProperty('isEnabled');
-      if(this.isEnabled){
-        this.$('.dislike').addClass('clicked');
-      }else{
-        this.$('.dislike').removeClass('clicked');
-      }
-    },
-    like: function(){
-      this.toggleProperty('isEnabled');
-      if(this.isEnabled){
-        this.$('.like').addClass('clicked');
-      }else{
-        this.$('.like').removeClass('clicked');
-      }
-    }
   }
 });
