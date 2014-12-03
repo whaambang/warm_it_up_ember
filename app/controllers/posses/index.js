@@ -2,11 +2,17 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
   sortProperties: ['scores'],
-  sortAscending: false,
-  // highestScore: function(){
-  //   var ob = this.get('firstObject');
-  //   return ob.get('scores');
-  // }.property('highestScore'),
+  sortAscending: true,
+  highestScore: function(){
+    var posse = this.get('sortedPosses');
+    var ob = posse.get('firstObject');
+    return ob.get('scores');
+  }.property('highestScores', 'sortedPosses'),
+  sortedPosses: function(){
+    var posses = this.get('poss');
+    var sorted = posses.sortBy('scores').reverse();
+    return sorted;
+  }.property('sortedPosse'),
   score: 1000,
   currentSolutions: function(){
     var solutions = this.get('solution');

@@ -8,7 +8,7 @@ export default Ember.ObjectController.extend({
   }.property('styledPointPercentage'),
 
   pointPercentage: function(){
-    var mostPoints = this.get('controllers.posses/index').get('score');
+    var mostPoints = this.get('controllers.posses/index').get('highestScore');
     var possePoints = parseInt(this.get('scores'));
     var percentage = (possePoints/mostPoints) * 100;
     return percentage;
