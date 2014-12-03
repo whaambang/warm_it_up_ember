@@ -19,7 +19,7 @@ export default Ember.ArrayController.extend({
       var s = parseInt(solution._data.problem.id);
       if(s === todaysProblem){ return true; }
     });    
-  }.property('currentSolutions')
+  }.property('currentSolutions'),
 
   actions: {
     addLike: function(solution) {
