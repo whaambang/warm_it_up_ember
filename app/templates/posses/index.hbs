@@ -9,7 +9,7 @@
   <div class="col-md-6">
     <h2>Leaderboard</h2>
     <div class="col-sm-12 leaderboard">
-      {{#each poss in poss itemController='poss'}}
+      {{#each poss in sortedPosses itemController='poss'}}
       {{#with poss}}
       <div class="box">
         <div class="posse-box-left">

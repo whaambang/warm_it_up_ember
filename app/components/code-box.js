@@ -48,7 +48,6 @@ export default Ember.Component.extend({
         dataType: 'jsonp'
         })
         .done(function(data){
-          debugger;
           var solution = data;
           if(solution === answer){
             alert('success!');
