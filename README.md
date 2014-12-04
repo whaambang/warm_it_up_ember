@@ -19,13 +19,9 @@ You will need the following things properly installed on your computer.
 * `bower install`
 
 ## Running / Development
-
-* `ember server`
+* 'rails server'
+* `ember server --proxy http://localhost:3000`
 * Visit your app at http://localhost:4200.
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -39,7 +35,14 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+There are more detailed instructions for deploying in the rails Readme.md
+
+## Wish List of things to Implement
+
+* Refactor to use a current user controller instead of the current implementation
+* Problem is only available right before the start of warmup time
+* Admin for adding problems and students and managing posses
+* Problems in multiple languages
 
 ## Further Reading / Useful Links
 
