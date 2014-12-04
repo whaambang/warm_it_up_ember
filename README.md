@@ -21,7 +21,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* Visit your app at http://localhost:4200.
+* Visit your app at http://http://192.241.154.25/:4200.
 
 ### Code Generators
 
