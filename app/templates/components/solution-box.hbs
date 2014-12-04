@@ -15,9 +15,5 @@
         <button class="solution-buttons like" {{action 'addLike' solution}}>Like</button>
       {{/if}}
     </div>
-    <pre class="hidden solution">
-      <code class="language-ruby">
-        {{solution.content}}
-      </code>
-    </pre>
+    <pre class="hidden solution">{{solution.content}}</pre>
   </div>
