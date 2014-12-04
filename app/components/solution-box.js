@@ -5,6 +5,10 @@ export default Ember.Component.extend({
   sortAscending: true,
   sortProperties: ['points_earned'],
   needs: ['application'],
+  points: function(){
+    return parseInt(this.get('solution.points_earned'));
+  }.property('points'),
+
 
   wasLiked: function () {
     var currentUser = this.get('currentUser');
@@ -33,10 +37,12 @@ export default Ember.Component.extend({
       // this.toggleProperty('isEnabled');
       this.sendAction('like', solution);
       this.set('wasLiked', true);
+      this.set('points', this.get('points') + 250);
     },
     removeLike: function(solution) {
       this.sendAction('unlike', solution);
       this.set('wasLiked', false);
+      this.set('points', this.get('points') - 250)
     },
   }
 });
