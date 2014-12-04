@@ -43,7 +43,7 @@ export default Ember.Component.extend({
       //  send request to Rails/Eval.in via AJAX
       $.ajax({
         type: 'GET',
-        url: 'http://0.0.0.0:3000/api/v1/coderunner',
+        url: 'api/v1/coderunner',
         data:{code: code},
         dataType: 'jsonp'
         })
