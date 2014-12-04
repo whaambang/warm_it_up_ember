@@ -16,14 +16,14 @@
         </li>
         {{#unless currentUser}}
           <li>
-            <a href='/' onClick="window.open('http://localhost:3000/auth/github', '_blank')">Sign In with Github</a>
+            <a href='/' onClick="window.open('http://192.241.154.25/auth/github', '_blank')">Sign In with Github</a>
           </li>
         {{else}}
           <li>
           Welcome {{currentUser.name}}
           </li>
           <li>
-            <a href='http://localhost:3000/signout'>Sign Out</a>
+            <a href='http://192.241.154.25/signout'>Sign Out</a>
           </li>
         {{/unless}}
       </ul>
