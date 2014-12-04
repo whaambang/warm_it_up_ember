@@ -42,7 +42,17 @@ export default Ember.ArrayController.extend({
         });
         vote.save()
         // this.get('model.votes').pushObject(vote);
+
       }
-    }
+    },
+    removeLike: function(solution){
+       var currentUser = this.get('controllers.application.currentUser')
+       var votes = solution.get('votes')  
+       var vote = votes.find(function(vote){
+        if(vote._data.user_id === currentUser.id){return true;}
+       });
+      vote.deleteRecord();
+      vote.save();
+                }
   }
 });
