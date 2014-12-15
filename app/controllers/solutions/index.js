@@ -4,7 +4,7 @@ export default Ember.ArrayController.extend({
   needs: ['application'],
 
   todaysProblem: function() {
-   var initialDate = new Date(2014, 10, 1);
+   var initialDate = new Date(2014, 11, 13);
    var now = Date.now();
    var difference = now - initialDate;
    var millisecondsPerDay = 24 * 60 * 60 * 1000;
@@ -47,7 +47,7 @@ export default Ember.ArrayController.extend({
     },
     removeLike: function(solution){
        var currentUser = this.get('controllers.application.currentUser')
-       var votes = solution.get('votes')  
+       var votes = solution.get('votes')
        var vote = votes.find(function(vote){
         if(vote._data.user_id === currentUser.id){return true;}
        });
