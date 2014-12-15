@@ -41,7 +41,7 @@ For Ember you will need the following things properly installed on your computer
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
 
-You've found yourself in the Ember component of Warm It Up, which serves content to our front end and deals with persistent data.  For convenience there will be full local installation instructions in both README's (Ember and Rails, you can find the Rails application [here](https://github.com/whaambang/warm_it_up_rails).
+You've found yourself in the Ember component of Warm It Up, which is our front end populated with data from a Rails API.  For convenience there will be full local installation instructions in both README's (Ember and Rails, you can find the Rails application [here](https://github.com/whaambang/warm_it_up_rails).
 
 To get everything up and running locally:
 
